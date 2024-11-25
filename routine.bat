@@ -1,4 +1,7 @@
 @echo off
+
+set USER=username
+
 goto check_Permissions
  :check_Permissions
  net session >nul 2>&1
@@ -8,11 +11,11 @@ goto check_Permissions
 	exit
  )
 echo Clearing...
-rmdir /s /q "C:\Users\dionakk\AppData\Local\Temp" >nul 2>&1
+rmdir /s /q "C:\Users\%USER%\AppData\Local\Temp" >nul 2>&1
 echo Cleared Temp folder
-rmdir /s /q "C:\Users\dionakk\AppData\LocalLow\webviewdata\" >nul 2>&1
+rmdir /s /q "C:\Users\%USER%\AppData\LocalLow\webviewdata\" >nul 2>&1
 echo Cleared webviewdata folder
-rmdir /s /q "C:\Users\dionakk\AppData\LocalLow\Microsoft" >nul 2>&1
+rmdir /s /q "C:\Users\%USER%\AppData\LocalLow\Microsoft" >nul 2>&1
 echo Cleared Microsoft cache folder
 ipconfig /flushdns >nul 2>&1
 echo Flushed DNS cache
