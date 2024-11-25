@@ -1,2 +1,3 @@
 # Windows-Cleanup
-Short .bat script that clears temporary files and logs on windows 10
+Short .bat script that clears temporary files and logs on windows 10.\
+Found out it could resolve some performance issues, even though you'll be better off installing linux on your computer...
